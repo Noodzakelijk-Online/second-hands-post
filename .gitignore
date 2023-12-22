@@ -1,0 +1,8 @@
+.env.local
+.env
+
+/venv
+/__pycache__
+/images
+/chromedriver-linux64
+/scraped_data.csv
