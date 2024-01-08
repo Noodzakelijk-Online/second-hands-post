@@ -60,7 +60,7 @@ account = next((item for item in vault.accounts if item.url.decode('utf-8') == '
 if account:
     username = account.username.decode('utf-8')
     password = account.password.decode('utf-8')
-    print("User name is ", username, ", Password is ", password)
+    # print("User name is ", username, ", Password is ", password)
 else:
     print("Account not found in LastPass vault!")
     exit()
