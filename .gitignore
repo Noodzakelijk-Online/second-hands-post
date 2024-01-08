@@ -6,3 +6,6 @@
 /images
 /chromedriver-linux64
 /scraped_data.csv
+
+/build
+/dist

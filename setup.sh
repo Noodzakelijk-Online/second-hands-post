@@ -9,14 +9,22 @@ else
     echo "Virtual environment 'venv' already exists."
 fi
 
+echo "Activating the virtual environment..."
 # Activate the virtual environment
 source venv/bin/activate
 
+echo "Installing packages from requirements.txt..."
 # Install packages from requirements.txt
 pip install -r requirements.txt
 
-# Download the NLP processing data
-python -m spacy download nl_core_news_md
+# Check if the NLP processing data 'nl_core_news_md' already exists
+if ! python -m spacy info nl_core_news_md > /dev/null 2>&1; then
+    echo "Downloading NLP processing data 'nl_core_news_md'..."
+    python -m spacy download nl_core_news_md
+else
+    echo "NLP processing data 'nl_core_news_md' already exists."
+fi
 
+echo "Running the main.py file..."
 # Run the main.py file
 python main.py
