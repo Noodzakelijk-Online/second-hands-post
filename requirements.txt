@@ -1,0 +1,5 @@
+selenium
+spacy
+python-decouple
+requests
+lastpass-python

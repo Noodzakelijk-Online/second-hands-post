@@ -295,35 +295,35 @@ else:
     data_list = scrape_tweedehands(driver)
 print(len(data_list))
 
-######### NextDoor ############
-# Login to nextdoor.com
-login_nextdoor(driver, vault)
-time.sleep(10)
-# Get already posted listings
-titles = get_all_titles(driver)
-# For each scraped listing, attempt to post it on nextdoor.com
-for item in data_list:
-    normalized_title = normalize_string(item["Title"])
-    if normalized_title in (normalize_string(title) for title in titles):
-        continue
-    post_listing_on_nextdoor(driver, item)
-# delete_items(driver)
+# ######### NextDoor ############
+# # Login to nextdoor.com
+# login_nextdoor(driver, vault)
+# time.sleep(10)
+# # Get already posted listings
+# titles = get_all_titles(driver)
+# # For each scraped listing, attempt to post it on nextdoor.com
+# for item in data_list:
+#     normalized_title = normalize_string(item["Title"])
+#     if normalized_title in (normalize_string(title) for title in titles):
+#         continue
+#     post_listing_on_nextdoor(driver, item)
+# # delete_items(driver)
 
 
-########## Marktplaats ############
-login_markplaats(driver, vault)
-time.sleep(5)
-titles = get_markplaats_titles(driver)
-for item in data_list:
-    normalized_title = normalize_string(item["Title"])
-    if normalized_title in (normalize_string(title) for title in titles):
-        continue
-    if post_listing_on_marktplaats(driver, item):
-        continue
-    else:
-        break
+# ########## Marktplaats ############
+# login_markplaats(driver, vault)
+# time.sleep(5)
+# titles = get_markplaats_titles(driver)
+# for item in data_list:
+#     normalized_title = normalize_string(item["Title"])
+#     if normalized_title in (normalize_string(title) for title in titles):
+#         continue
+#     if post_listing_on_marktplaats(driver, item):
+#         continue
+#     else:
+#         break
 
-driver.close()
+# driver.close()
 
 
 ########## Koopplein ############
