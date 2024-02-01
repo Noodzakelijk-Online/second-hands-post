@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Stop_Script
+Icon=/home/noodzakelijkonline/.local/share/icons/stop-button.png
+Exec=bash -c "cd /home/noodzakelijkonline/python_bot && ./stop.sh"
+Terminal=false

@@ -9,3 +9,4 @@ chmod +x setup.sh
 ```
 
 .desktop files are One-click UI implementations.
+.desktop files should go to the /.local/share/applications directory so that they can appear on linux apps list.

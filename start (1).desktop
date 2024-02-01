@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=My Script
-Exec="cd /home/noodzakelijkonline/python_bot && ./setup.sh"
-Terminal=true
