@@ -7,3 +7,5 @@ chmod +x setup.sh
 ./setup.sh
 
 ```
+
+.desktop files are One-click UI implementations.
